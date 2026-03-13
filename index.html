@@ -38,7 +38,7 @@
             <div class="hero-circle hero-circle-2"></div>
             <div class="hero-circle hero-circle-3"></div>
             <div class="hero-food hero-food-1">🍕</div>
-            <div class="hero-food hero-food-2">🍔</div>
+            <div class="hero-food hero-food-2"></div>
             <div class="hero-food hero-food-3">🍟</div>
             <div class="hero-food hero-food-4">🥤</div>
         </div>
@@ -447,15 +447,15 @@
                 <div class="product-card" data-category="kits">
                     <div class="product-image">
                         <span class="product-badge">Especial</span>
-                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="Kit Família Especial">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="Kit Explosão">
                     </div>
                     <div class="product-info">
                         <span class="product-category">Kit</span>
-                        <h3 class="product-name">Kit Família Especial</h3>
+                        <h3 class="product-name">Kit Explosão</h3>
                         <p class="product-description">2 pizzas com borda (cheddar ou catupiry), 75 salgadinhos variados, 1 refri de 1L</p>
                         <div class="product-footer">
                             <span class="product-price">R$ 99,99</span>
-                            <button class="add-cart-btn" data-id="18" data-name="Kit Família Especial" data-price="99.99" data-category="kits">
+                            <button class="add-cart-btn" data-id="18" data-name="Kit Explosão" data-price="99.99" data-category="kits">
                                 <i class="fas fa-plus"></i> Adicionar
                             </button>
                         </div>
@@ -616,8 +616,8 @@
                 </label>
                 <div class="halfhalf-flavors" id="halfHalfFlavors" style="display: none;">
                     <div class="halfhalf-select">
-                        <label>Primeiro sabor:</label>
-                        <select id="firstHalf">
+                        <label>Primeiro sabor (automático):</label>
+                        <select id="firstHalf" disabled>
                             <option value="">Selecione...</option>
                         </select>
                     </div>
@@ -630,7 +630,7 @@
                 </div>
             </div>
 
-            <!-- Opção Borda Recheada (para Pizzas) -->
+            <!-- Opção Borda Recheada (para Pizzas e Kits) -->
             <div class="modal-options" id="borderOptions" style="display: none;">
                 <label class="modal-label">🧀 Borda Recheada (+R$ 2,00):</label>
                 <div class="border-options">
@@ -646,6 +646,116 @@
                         <input type="radio" name="border" value="Cheddar" data-price="2">
                         <span class="border-box">🧀 Cheddar</span>
                     </label>
+                </div>
+            </div>
+
+            <!-- Opção Sabor da Pizza (para Kits) -->
+            <div class="modal-options" id="kitPizzaSection" style="display: none;">
+                <label class="modal-label">🍕 Escolha o Sabor da Pizza:</label>
+                <select id="kitPizzaSelect" class="kit-select">
+                    <option value="">Selecione o sabor...</option>
+                </select>
+            </div>
+
+            <!-- Opção Metade-Metade para Kits -->
+            <div class="modal-options" id="kitHalfHalfSection" style="display: none;">
+                <label class="modal-label">🍕 Metade Metade:</label>
+                <label class="halfhalf-toggle">
+                    <input type="checkbox" id="kitHalfHalfCheckbox">
+                    <span class="halfhalf-switch">
+                        <span class="halfhalf-slider"></span>
+                    </span>
+                    <span class="halfhalf-text">Quero dividir em dois sabores!</span>
+                </label>
+                <div class="halfhalf-flavors" id="kitHalfHalfFlavors" style="display: none;">
+                    <div class="halfhalf-select">
+                        <label>Primeiro sabor:</label>
+                        <select id="kitFirstHalf">
+                            <option value="">Selecione...</option>
+                        </select>
+                    </div>
+                    <div class="halfhalf-select">
+                        <label>Segundo sabor:</label>
+                        <select id="kitSecondHalf">
+                            <option value="">Selecione...</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Opção Refrigerante (para Kits) -->
+            <div class="modal-options" id="kitSodaSection" style="display: none;">
+                <label class="modal-label">🥤 Escolha o Refrigerante:</label>
+                <div class="soda-options">
+                    <label class="soda-option">
+                        <input type="radio" name="kitSoda" value="Pepsi" data-price="0" checked>
+                        <span class="soda-box">🥤 Pepsi</span>
+                    </label>
+                    <label class="soda-option">
+                        <input type="radio" name="kitSoda" value="Guaraná" data-price="0">
+                        <span class="soda-box">🥤 Guaraná</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Kit Família - Seleção de 2 Pizzas -->
+            <div class="modal-options" id="kitFamiliaSection" style="display: none;">
+                <label class="modal-label">🍕 Escolha a 1ª Pizza:</label>
+                <select id="kitPizza1Select" class="kit-select">
+                    <option value="">Selecione o sabor...</option>
+                </select>
+                
+                <label class="modal-label" style="margin-top: 12px;">🍕 Escolha a 2ª Pizza:</label>
+                <select id="kitPizza2Select" class="kit-select">
+                    <option value="">Selecione o sabor...</option>
+                </select>
+                
+                <!-- Half-half para Pizza 1 -->
+                <label class="modal-label" style="margin-top: 12px;">🍕 1ª Pizza - Metade Metade:</label>
+                <label class="halfhalf-toggle">
+                    <input type="checkbox" id="kitPizza1HalfHalf">
+                    <span class="halfhalf-switch">
+                        <span class="halfhalf-slider"></span>
+                    </span>
+                    <span class="halfhalf-text">Quero dividir em dois sabores!</span>
+                </label>
+                <div class="halfhalf-flavors" id="kitPizza1HalfHalfFlavors" style="display: none;">
+                    <div class="halfhalf-select">
+                        <label>Primeiro sabor:</label>
+                        <select id="kitPizza1FirstHalf">
+                            <option value="">Selecione...</option>
+                        </select>
+                    </div>
+                    <div class="halfhalf-select">
+                        <label>Segundo sabor:</label>
+                        <select id="kitPizza1SecondHalf">
+                            <option value="">Selecione...</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Half-half para Pizza 2 -->
+                <label class="modal-label" style="margin-top: 12px;">🍕 2ª Pizza - Metade Metade:</label>
+                <label class="halfhalf-toggle">
+                    <input type="checkbox" id="kitPizza2HalfHalf">
+                    <span class="halfhalf-switch">
+                        <span class="halfhalf-slider"></span>
+                    </span>
+                    <span class="halfhalf-text">Quero dividir em dois sabores!</span>
+                </label>
+                <div class="halfhalf-flavors" id="kitPizza2HalfHalfFlavors" style="display: none;">
+                    <div class="halfhalf-select">
+                        <label>Primeiro sabor:</label>
+                        <select id="kitPizza2FirstHalf">
+                            <option value="">Selecione...</option>
+                        </select>
+                    </div>
+                    <div class="halfhalf-select">
+                        <label>Segundo sabor:</label>
+                        <select id="kitPizza2SecondHalf">
+                            <option value="">Selecione...</option>
+                        </select>
+                    </div>
                 </div>
             </div>
 
