@@ -84,20 +84,20 @@ const confirmCheckoutBtn = document.getElementById('confirmCheckoutBtn');
 
 // Lista de pizzas para opção metade-metade
 const pizzaFlavors = [
-    { name: 'Pizza Mussarela', price: 27.99, baseName: 'Mussarela' },
-    { name: 'Pizza Calabresa', price: 29.99, baseName: 'Calabresa' },
-    { name: 'Pizza Frango', price: 29.99, baseName: 'Frango' },
-    { name: 'Pizza Quatro Queijos', price: 29.99, baseName: 'Quatro Queijos' },
-    { name: 'Pizza Mista', price: 29.99, baseName: 'Mista' },
-    { name: 'Pizza Frango Catupiry', price: 29.99, baseName: 'Frango Catupiry' },
-    { name: 'Pizza Portuguesa', price: 29.99, baseName: 'Portuguesa' },
+    { name: 'Pizza Mussarela', price: 28.00, baseName: 'Mussarela' },
+    { name: 'Pizza Calabresa', price: 30.00, baseName: 'Calabresa' },
+    { name: 'Pizza Frango', price: 30.00, baseName: 'Frango' },
+    { name: 'Pizza Quatro Queijos', price: 30.00, baseName: 'Quatro Queijos' },
+    { name: 'Pizza Mista', price: 30.00, baseName: 'Mista' },
+    { name: 'Pizza Frango Catupiry', price: 30.00, baseName: 'Frango Catupiry' },
+    { name: 'Pizza Portuguesa', price: 30.00, baseName: 'Portuguesa' },
     { name: 'Pizza Frango Bacon', price: 32.00, baseName: 'Frango Bacon' },
     { name: 'Pizza Calamista', price: 32.00, baseName: 'Calamista' },
     { name: 'Pizza Pizzaolo', price: 32.00, baseName: 'Pizzaolo' },
-    { name: 'Pizza Calabacon', price: 34.99, baseName: 'Calabacon' },
-    { name: 'Pizza Mistão', price: 34.99, baseName: 'Mistão' },
-    { name: 'Pizza Super Frango', price: 34.99, baseName: 'Super Frango' },
-    { name: 'Pizza Moda da Casa', price: 37.99, baseName: 'Moda da Casa' }
+    { name: 'Pizza Calabacon', price: 35.00, baseName: 'Calabacon' },
+    { name: 'Pizza Mistão', price: 35.00, baseName: 'Mistão' },
+    { name: 'Pizza Super Frango', price: 35.00, baseName: 'Super Frango' },
+    { name: 'Pizza Moda da Casa', price: 38.00, baseName: 'Moda da Casa' }
 ];
 
 // Função para encontrar o preço de uma pizza pelo nome
@@ -287,9 +287,8 @@ function updateCartTotals() {
     const subtotal = cart.reduce(function(sum, item) { return sum + (item.price * item.quantity); }, 0);
     const total = subtotal + deliveryFee;
 
-    cartSubtotal.textContent = 'R$ ' + subtotal.toFixed(2).replace('.', ',');
-    deliveryFeeEl.textContent = deliveryFee === 0 ? 'Gratis' : 'R$ ' + deliveryFee.toFixed(2).replace('.', ',');
-    cartTotal.textContent = 'R$ ' + total.toFixed(2).replace('.', ',');
+    // Cart shows only total (delivery fee is shown at checkout)
+    cartTotal.textContent = 'R$ ' + subtotal.toFixed(2).replace('.', ',');
 }
 
 function updateItemQuantity(index, change) {
@@ -397,7 +396,7 @@ function initModal() {
             
             // Populate second flavor dropdown - ONLY R$ 27,99 and R$ 29,99 pizzas
             kitSecondHalf.innerHTML = '<option value="">Selecione...</option>';
-            const cheapPizzas = pizzaFlavors.filter(f => f.price === 27.99 || f.price === 29.99);
+            const cheapPizzas = pizzaFlavors.filter(f => f.price === 28.00 || f.price === 30.00);
             cheapPizzas.forEach(function(flavor) {
                 kitSecondHalf.innerHTML += '<option value="' + flavor.baseName + '" data-price="' + flavor.price + '">' + flavor.baseName + ' - R$ ' + flavor.price.toFixed(2).replace('.', ',') + '</option>';
             });
@@ -608,7 +607,7 @@ function openProductModal(id, name, price, category, image) {
             
             // Populate kit half-half second flavor dropdown - ONLY R$ 27,99 and R$ 29,99 pizzas
             kitSecondHalf.innerHTML = '<option value="">Selecione...</option>';
-            const cheapPizzas = pizzaFlavors.filter(f => f.price === 27.99 || f.price === 29.99);
+            const cheapPizzas = pizzaFlavors.filter(f => f.price === 28.00 || f.price === 30.00);
             cheapPizzas.forEach(function(flavor) {
                 kitSecondHalf.innerHTML += '<option value="' + flavor.baseName + '" data-price="' + flavor.price + '">' + flavor.baseName + ' - R$ ' + flavor.price.toFixed(2).replace('.', ',') + '</option>';
             });
