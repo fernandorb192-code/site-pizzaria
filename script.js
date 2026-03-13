@@ -332,7 +332,18 @@ function initProductCards() {
             const category = btn.dataset.category;
             const image = btn.closest('.product-card').querySelector('.product-image img').src;
             
-            openProductModal(id, name, price, category, image);
+            // Bebidas vão direto para o carrinho sem abrir o modal
+            if (category === 'bebidas') {
+                const item = {
+                    name: name,
+                    price: price,
+                    quantity: 1,
+                    image: image
+                };
+                addToCart(item);
+            } else {
+                openProductModal(id, name, price, category, image);
+            }
         });
     });
 }
