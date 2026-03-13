@@ -6,11 +6,9 @@
     <title>Eri Lanches - Pizzaria & Lanchonete</title>
     <meta name="description" content="As melhores pizzas e lanches delivery. Peça agora pelo WhatsApp!">
     <link rel="stylesheet" href="style.css">
-    <!-- Fontes Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -22,7 +20,6 @@
                 <span class="logo-text">Eri <span>Lanches</span></span>
             </div>
             <div class="header-actions">
-                <!-- Botão Light/Dark Mode -->
                 <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
                     <i class="fas fa-moon"></i>
                 </button>
@@ -64,17 +61,13 @@
                 
                 <p class="hero-subtitle">
                     <span class="hero-subtitle-icon">✨</span>
-                    Sabor caseiro, ingredientes frescos e entrega rápida прямо agora!
+                    Sabor caseiro, ingredientes frescos e entrega rápida!
                 </p>
                 
                 <div class="hero-cta">
                     <a href="#menu" class="hero-btn-primary">
                         <span>Ver Cardápio</span>
                         <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#menu" class="hero-btn-secondary">
-                        <i class="fas fa-play"></i>
-                        <span>Como pedir</span>
                     </a>
                 </div>
                 
@@ -97,7 +90,7 @@
                         <div class="hero-feature-icon"><i class="fas fa-heart"></i></div>
                         <div class="hero-feature-text">
                             <span class="hero-feature-title">Clientes</span>
-                            <span class="hero-feature-subtitle">5.000+</span>
+                            <span class="hero-feature-subtitle">200+</span>
                         </div>
                     </div>
                 </div>
@@ -113,7 +106,7 @@
                         <span class="hero-floating-icon">🍕</span>
                         <div class="hero-floating-info">
                             <span class="hero-floating-name">Pizza Frango</span>
-                            <span class="hero-floating-price">R$ 35</span>
+                            <span class="hero-floating-price">R$ 32</span>
                         </div>
                     </div>
                     <div class="hero-floating-card hero-floating-card-2">
@@ -147,25 +140,25 @@
             <div class="category-tabs">
                 <button class="tab-btn active" data-category="all"><span>Cardápio</span></button>
                 <button class="tab-btn" data-category="pizzas"><span>Pizzas</span></button>
-                <button class="tab-btn" data-category="hamburgueres"><span>Hambúrgueres</span></button>
+                <button class="tab-btn" data-category="kits"><span>Kits</span></button>
+                <button class="tab-btn" data-category="bebidas"><span>Bebidas</span></button>
             </div>
 
             <!-- Grid de Produtos -->
             <div class="products-grid" id="productsGrid">
-                <!-- Pizzas -->
+                <!-- Pizzas Tradicionais -->
                 <div class="product-card" data-category="pizzas">
                     <div class="product-image">
-                        <span class="product-badge">Mais Vendida</span>
-                        <button class="product-wishlist" title="Favoritar"><i class="fas fa-heart"></i></button>
-                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="Pizza Frango Bacon">
+                        <span class="product-badge">Clássica</span>
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop" alt="Pizza Mussarela">
                     </div>
                     <div class="product-info">
-                        <span class="product-category">Pizza</span>
-                        <h3 class="product-name">Pizza Frango Bacon</h3>
-                        <p class="product-description">Frango desfiado, bacon crocante, mussarela e catupiry. Uma combinação irresistível!</p>
+                        <span class="product-category">Pizza Tradicional</span>
+                        <h3 class="product-name">Pizza Mussarela</h3>
+                        <p class="product-description">Mussarela, tomate, orégano</p>
                         <div class="product-footer">
-                            <span class="product-price">R$ 35,00</span>
-                            <button class="add-cart-btn" data-id="1" data-name="Pizza Frango Bacon" data-price="35.00" data-category="pizzas">
+                            <span class="product-price">R$ 27,99</span>
+                            <button class="add-cart-btn" data-id="1" data-name="Pizza Mussarela" data-price="27.99" data-category="pizzas">
                                 <i class="fas fa-plus"></i> Adicionar
                             </button>
                         </div>
@@ -174,16 +167,15 @@
 
                 <div class="product-card" data-category="pizzas">
                     <div class="product-image">
-                        <button class="product-wishlist" title="Favoritar"><i class="fas fa-heart"></i></button>
                         <img src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?w=400&h=300&fit=crop" alt="Pizza Calabresa">
                     </div>
                     <div class="product-info">
-                        <span class="product-category">Pizza</span>
+                        <span class="product-category">Pizza Tradicional</span>
                         <h3 class="product-name">Pizza Calabresa</h3>
-                        <p class="product-description">Calabresa fatiada, cebola roxa, mussarela eazeite de oliva. Clássica e deliciosa!</p>
+                        <p class="product-description">Calabresa, mussarela, cebola, tomate</p>
                         <div class="product-footer">
-                            <span class="product-price">R$ 32,00</span>
-                            <button class="add-cart-btn" data-id="2" data-name="Pizza Calabresa" data-price="32.00" data-category="pizzas">
+                            <span class="product-price">R$ 29,99</span>
+                            <button class="add-cart-btn" data-id="2" data-name="Pizza Calabresa" data-price="29.99" data-category="pizzas">
                                 <i class="fas fa-plus"></i> Adicionar
                             </button>
                         </div>
@@ -192,16 +184,15 @@
 
                 <div class="product-card" data-category="pizzas">
                     <div class="product-image">
-                        <button class="product-wishlist" title="Favoritar"><i class="fas fa-heart"></i></button>
-                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop" alt="Pizza Portuguesa">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="Pizza Frango">
                     </div>
                     <div class="product-info">
-                        <span class="product-category">Pizza</span>
-                        <h3 class="product-name">Pizza Portuguesa</h3>
-                        <p class="product-description">Presunto, mussarela, ovo, cebola roxa e azeitonas. Todo mundo ama!</p>
+                        <span class="product-category">Pizza Tradicional</span>
+                        <h3 class="product-name">Pizza Frango</h3>
+                        <p class="product-description">Frango, mussarela, milho, tomate</p>
                         <div class="product-footer">
-                            <span class="product-price">R$ 34,00</span>
-                            <button class="add-cart-btn" data-id="3" data-name="Pizza Portuguesa" data-price="34.00" data-category="pizzas">
+                            <span class="product-price">R$ 29,99</span>
+                            <button class="add-cart-btn" data-id="3" data-name="Pizza Frango" data-price="29.99" data-category="pizzas">
                                 <i class="fas fa-plus"></i> Adicionar
                             </button>
                         </div>
@@ -210,34 +201,15 @@
 
                 <div class="product-card" data-category="pizzas">
                     <div class="product-image">
-                        <button class="product-wishlist" title="Favoritar"><i class="fas fa-heart"></i></button>
-                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop" alt="Pizza Marguerita">
-                    </div>
-                    <div class="product-info">
-                        <span class="product-category">Pizza</span>
-                        <h3 class="product-name">Pizza Marguerita</h3>
-                        <p class="product-description">Mussarela, tomate fresco e manjericão. Sabor italiano autêntico!</p>
-                        <div class="product-footer">
-                            <span class="product-price">R$ 30,00</span>
-                            <button class="add-cart-btn" data-id="4" data-name="Pizza Marguerita" data-price="30.00" data-category="pizzas">
-                                <i class="fas fa-plus"></i> Adicionar
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="pizzas">
-                    <div class="product-image">
-                        <button class="product-wishlist" title="Favoritar"><i class="fas fa-heart"></i></button>
                         <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop" alt="Pizza Quatro Queijos">
                     </div>
                     <div class="product-info">
-                        <span class="product-category">Pizza</span>
+                        <span class="product-category">Pizza Tradicional</span>
                         <h3 class="product-name">Pizza Quatro Queijos</h3>
-                        <p class="product-description">Mussarela, gorgonzola, parmesan e catupiry. Para os lovers de queijo!</p>
+                        <p class="product-description">Mussarela, cheddar, catupiry</p>
                         <div class="product-footer">
-                            <span class="product-price">R$ 36,00</span>
-                            <button class="add-cart-btn" data-id="5" data-name="Pizza Quatro Queijos" data-price="36.00" data-category="pizzas">
+                            <span class="product-price">R$ 29,99</span>
+                            <button class="add-cart-btn" data-id="4" data-name="Pizza Quatro Queijos" data-price="29.99" data-category="pizzas">
                                 <i class="fas fa-plus"></i> Adicionar
                             </button>
                         </div>
@@ -246,93 +218,279 @@
 
                 <div class="product-card" data-category="pizzas">
                     <div class="product-image">
-                        <span class="product-badge">Picante</span>
-                        <button class="product-wishlist" title="Favoritar"><i class="fas fa-heart"></i></button>
-                        <img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=400&h=300&fit=crop" alt="Pizza Pepperoni">
+                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop" alt="Pizza Mista">
                     </div>
                     <div class="product-info">
-                        <span class="product-category">Pizza</span>
-                        <h3 class="product-name">Pizza Pepperoni</h3>
-                        <p class="product-description">Pepperoni americano e mussarela especial. Para quem curte!</p>
+                        <span class="product-category">Pizza Tradicional</span>
+                        <h3 class="product-name">Pizza Mista</h3>
+                        <p class="product-description">Presunto, mussarela, milho, cebola, tomate</p>
                         <div class="product-footer">
-                            <span class="product-price">R$ 38,00</span>
-                            <button class="add-cart-btn" data-id="6" data-name="Pizza Pepperoni" data-price="38.00" data-category="pizzas">
+                            <span class="product-price">R$ 29,99</span>
+                            <button class="add-cart-btn" data-id="5" data-name="Pizza Mista" data-price="29.99" data-category="pizzas">
                                 <i class="fas fa-plus"></i> Adicionar
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Hambúrgueres -->
-                <div class="product-card" data-category="hamburgueres">
+                <div class="product-card" data-category="pizzas">
                     <div class="product-image">
-                        <span class="product-badge">Tradicional</span>
-                        <button class="product-wishlist" title="Favoritar"><i class="fas fa-heart"></i></button>
-                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop" alt="Hambúrguer Clássico">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="Pizza Frango Catupiry">
                     </div>
                     <div class="product-info">
-                        <span class="product-category">Hambúrguer</span>
-                        <h3 class="product-name">Hambúrguer Clássico</h3>
-                        <p class="product-description">Pão, carne 180g, queijo, alface, tomate e maionese. O de sempre!</p>
+                        <span class="product-category">Pizza Tradicional</span>
+                        <h3 class="product-name">Pizza Frango Catupiry</h3>
+                        <p class="product-description">Frango, mussarela, catupiry, orégano</p>
                         <div class="product-footer">
-                            <span class="product-price">R$ 18,00</span>
-                            <button class="add-cart-btn" data-id="7" data-name="Hambúrguer Clássico" data-price="18.00" data-category="hamburgueres">
+                            <span class="product-price">R$ 29,99</span>
+                            <button class="add-cart-btn" data-id="6" data-name="Pizza Frango Catupiry" data-price="29.99" data-category="pizzas">
                                 <i class="fas fa-plus"></i> Adicionar
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-card" data-category="hamburgueres">
+                <div class="product-card" data-category="pizzas">
                     <div class="product-image">
-                        <button class="product-wishlist" title="Favoritar"><i class="fas fa-heart"></i></button>
-                        <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&h=300&fit=crop" alt="Hambúrguer Bacon">
+                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop" alt="Pizza Portuguesa">
                     </div>
                     <div class="product-info">
-                        <span class="product-category">Hambúrguer</span>
-                        <h3 class="product-name">Hambúrguer Bacon</h3>
-                        <p class="product-description">Pão, carne 180g, bacon crocante, cheddar e maionese. Ням!</p>
+                        <span class="product-category">Pizza Tradicional</span>
+                        <h3 class="product-name">Pizza Portuguesa</h3>
+                        <p class="product-description">Presunto, mussarela, ovo, cebola</p>
                         <div class="product-footer">
-                            <span class="product-price">R$ 22,00</span>
-                            <button class="add-cart-btn" data-id="8" data-name="Hambúrguer Bacon" data-price="22.00" data-category="hamburgueres">
+                            <span class="product-price">R$ 29,99</span>
+                            <button class="add-cart-btn" data-id="7" data-name="Pizza Portuguesa" data-price="29.99" data-category="pizzas">
                                 <i class="fas fa-plus"></i> Adicionar
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-card" data-category="hamburgueres">
+                <!-- Pizzas Especiais -->
+                <div class="product-card" data-category="pizzas">
                     <div class="product-image">
-                        <span class="product-badge">Premium</span>
-                        <button class="product-wishlist" title="Favoritar"><i class="fas fa-heart"></i></button>
-                        <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&h=300&fit=crop" alt="Hambúrguer Duplo">
+                        <span class="product-badge">Mais Vendida</span>
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="Pizza Frango Bacon">
                     </div>
                     <div class="product-info">
-                        <span class="product-category">Hambúrguer</span>
-                        <h3 class="product-name">Hambúrguer Duplo</h3>
-                        <p class="product-description">Pão, 2 carnes 180g, 2 queijos, bacon e maionese especial. Para fome dupla!</p>
+                        <span class="product-category">Pizza Especial</span>
+                        <h3 class="product-name">Pizza Frango Bacon</h3>
+                        <p class="product-description">Frango, mussarela, bacon, milho, tomate, cebola</p>
                         <div class="product-footer">
-                            <span class="product-price">R$ 28,00</span>
-                            <button class="add-cart-btn" data-id="9" data-name="Hambúrguer Duplo" data-price="28.00" data-category="hamburgueres">
+                            <span class="product-price">R$ 32,00</span>
+                            <button class="add-cart-btn" data-id="8" data-name="Pizza Frango Bacon" data-price="32.00" data-category="pizzas">
                                 <i class="fas fa-plus"></i> Adicionar
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-card" data-category="hamburgueres">
+                <div class="product-card" data-category="pizzas">
                     <div class="product-image">
-                        <span class="product-badge">Vegano</span>
-                        <button class="product-wishlist" title="Favoritar"><i class="fas fa-heart"></i></button>
-                        <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=400&h=300&fit=crop" alt="Hambúrguer Veggie">
+                        <img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=400&h=300&fit=crop" alt="Pizza Calamista">
                     </div>
                     <div class="product-info">
-                        <span class="product-category">Hambúrguer</span>
-                        <h3 class="product-name">Hambúrguer Veggie</h3>
-                        <p class="product-description">Pão integral, hambúrguer de grão-de-bico, legumes e maionese verde.</p>
+                        <span class="product-category">Pizza Especial</span>
+                        <h3 class="product-name">Pizza Calamista</h3>
+                        <p class="product-description">Massa fresca, molho, mussarela, tomate, bacon</p>
                         <div class="product-footer">
-                            <span class="product-price">R$ 20,00</span>
-                            <button class="add-cart-btn" data-id="10" data-name="Hambúrguer Veggie" data-price="20.00" data-category="hamburgueres">
+                            <span class="product-price">R$ 32,00</span>
+                            <button class="add-cart-btn" data-id="9" data-name="Pizza Calamista" data-price="32.00" data-category="pizzas">
+                                <i class="fas fa-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="pizzas">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="Pizza Pizzaolo">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Pizza Especial</span>
+                        <h3 class="product-name">Pizza Pizzaolo</h3>
+                        <p class="product-description">Frango, calabresa, mussarela, ovo, bacon, cebola, tomate</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 32,00</span>
+                            <button class="add-cart-btn" data-id="10" data-name="Pizza Pizzaolo" data-price="32.00" data-category="pizzas">
+                                <i class="fas fa-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="pizzas">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=400&h=300&fit=crop" alt="Pizza Calabacon">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Pizza Especial</span>
+                        <h3 class="product-name">Pizza Calabacon</h3>
+                        <p class="product-description">Calabresa, mussarela, bacon, cebola, tomate</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 34,99</span>
+                            <button class="add-cart-btn" data-id="11" data-name="Pizza Calabacon" data-price="34.99" data-category="pizzas">
+                                <i class="fas fa-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizzas Premium -->
+                <div class="product-card" data-category="pizzas">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="Pizza Mistão">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Pizza Premium</span>
+                        <h3 class="product-name">Pizza Mistão</h3>
+                        <p class="product-description">Presunto, frango, calabresa, mussarela, cebola, tomate</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 34,99</span>
+                            <button class="add-cart-btn" data-id="12" data-name="Pizza Mistão" data-price="34.99" data-category="pizzas">
+                                <i class="fas fa-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="pizzas">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="Pizza Super Frango">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Pizza Premium</span>
+                        <h3 class="product-name">Pizza Super Frango</h3>
+                        <p class="product-description">Frango, mussarela, bacon, cheddar, catupiry, tomate, cebola, milho</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 34,99</span>
+                            <button class="add-cart-btn" data-id="13" data-name="Pizza Super Frango" data-price="34.99" data-category="pizzas">
+                                <i class="fas fa-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="pizzas">
+                    <div class="product-image">
+                        <span class="product-badge">Top</span>
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="Pizza Moda da Casa">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Pizza Premium</span>
+                        <h3 class="product-name">Pizza Moda da Casa</h3>
+                        <p class="product-description">Presunto, frango, calabresa, mussarela, bacon, ovo, cebola, tomate</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 37,99</span>
+                            <button class="add-cart-btn" data-id="14" data-name="Pizza Moda da Casa" data-price="37.99" data-category="pizzas">
+                                <i class="fas fa-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kits -->
+                <div class="product-card" data-category="kits">
+                    <div class="product-image">
+                        <span class="product-badge">Popular</span>
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="Kit Popular">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Kit</span>
+                        <h3 class="product-name">Kit Popular</h3>
+                        <p class="product-description">1 pizza, 20 salgadinhos, 1 refri de 1L (Pepsi ou Guaraná)</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 39,99</span>
+                            <button class="add-cart-btn" data-id="15" data-name="Kit Popular" data-price="39.99" data-category="kits">
+                                <i class="fas fa-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="kits">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="Kit Show">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Kit</span>
+                        <h3 class="product-name">Kit Show</h3>
+                        <p class="product-description">1 pizza, 35 salgadinhos, 1 refri de 1L (Pepsi ou Guaraná)</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 49,99</span>
+                            <button class="add-cart-btn" data-id="16" data-name="Kit Show" data-price="49.99" data-category="kits">
+                                <i class="fas fa-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="kits">
+                    <div class="product-image">
+                        <span class="product-badge">Família</span>
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="Kit Família">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Kit</span>
+                        <h3 class="product-name">Kit Família</h3>
+                        <p class="product-description">2 pizzas, 50 salgadinhos, 1 refri de 1L (Pepsi ou Guaraná)</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 79,99</span>
+                            <button class="add-cart-btn" data-id="17" data-name="Kit Família" data-price="79.99" data-category="kits">
+                                <i class="fas fa-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="kits">
+                    <div class="product-image">
+                        <span class="product-badge">Especial</span>
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="Kit Família Especial">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Kit</span>
+                        <h3 class="product-name">Kit Família Especial</h3>
+                        <p class="product-description">2 pizzas com borda (cheddar ou catupiry), 75 salgadinhos variados, 1 refri de 1L</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 99,99</span>
+                            <button class="add-cart-btn" data-id="18" data-name="Kit Família Especial" data-price="99.99" data-category="kits">
+                                <i class="fas fa-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bebidas -->
+                <div class="product-card" data-category="bebidas">
+                    <div class="product-image">
+                        <img src="pepsi.jpg" alt="Pepsi 1L">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Bebida</span>
+                        <h3 class="product-name">Pepsi 1L</h3>
+                        <p class="product-description">Lata de 1 litro</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 7,99</span>
+                            <button class="add-cart-btn" data-id="19" data-name="Pepsi 1L" data-price="7.99" data-category="bebidas">
+                                <i class="fas fa-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="bebidas">
+                    <div class="product-image">
+                        <img src="guarana.jpg" alt="Guaraná Antarctica 1L">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Bebida</span>
+                        <h3 class="product-name">Guaraná Antarctica 1L</h3>
+                        <p class="product-description">Lata de 1 litro</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 7,99</span>
+                            <button class="add-cart-btn" data-id="20" data-name="Guaraná Antarctica 1L" data-price="7.99" data-category="bebidas">
                                 <i class="fas fa-plus"></i> Adicionar
                             </button>
                         </div>
@@ -351,9 +509,10 @@
             </div>
             <p class="footer-text">Entregamos em São José e região!</p>
             <div class="footer-contact">
-                <p><i class="fas fa-phone-alt"></i> (85) 99999-9999</p>
-                <p><i class="fab fa-whatsapp"></i> WhatsApp: (85) 99999-9999</p>
-                <p><i class="fas fa-map-marker-alt"></i> São José - Fortaleza, CE</p>
+                <p><i class="fas fa-phone-alt"></i> (88) 99441-3681</p>
+                <p><i class="fab fa-whatsapp"></i> WhatsApp: (88) 99441-3681</p>
+                <p><i class="fab fa-instagram"></i> @eri_lanchess</p>
+                <p><i class="fas fa-clock"></i> Funcionamos de Sexta a Domingo</p>
             </div>
             <div class="footer-social">
                 <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
@@ -364,7 +523,7 @@
         </div>
     </footer>
 
-    <!-- Carrinho Lateral (Slide-in) -->
+    <!-- Carrinho Lateral -->
     <div class="cart-overlay" id="cartOverlay"></div>
     <aside class="cart-sidebar" id="cartSidebar">
         <div class="cart-header">
@@ -375,7 +534,6 @@
         </div>
         
         <div class="cart-items" id="cartItems">
-            <!-- Itens do carrinho serão inseridos via JavaScript -->
             <div class="cart-empty" id="cartEmpty">
                 <i class="fas fa-shopping-basket"></i>
                 <p>Seu carrinho está vazio</p>
@@ -390,8 +548,8 @@
                     <span id="cartSubtotal">R$ 0,00</span>
                 </div>
                 <div class="cart-delivery">
-                    <span><i class="fas fa-motorcycle"></i> Taxa de Entrega:</span>
-                    <span id="deliveryFee">A calcular</span>
+                    <span><i class="fas fa-motorcycle"></i> Entrega:</span>
+                    <span id="deliveryFee">R$ 0,00</span>
                 </div>
             </div>
             <div class="cart-total">
@@ -446,49 +604,47 @@
                 </div>
             </div>
 
-            <!-- Opções de Adicionais (para Hambúrgueres) -->
-            <div class="modal-options" id="extrasOptions" style="display: none;">
-                <label class="modal-label">Adicionais:</label>
-                <div class="extras-options">
-                    <label class="extra-option">
-                        <input type="checkbox" name="extra" value="Bacon Extra" data-price="5">
-                        <span class="extra-box">
-                            <i class="fas fa-plus-circle"></i>
-                            <span class="extra-name">Bacon Extra</span>
-                            <span class="extra-price">+ R$ 5</span>
-                        </span>
+            <!-- Opção Metade-Metade -->
+            <div class="modal-options" id="halfHalfSection" style="display: none;">
+                <label class="modal-label">🍕 Metade Metade:</label>
+                <label class="halfhalf-toggle">
+                    <input type="checkbox" id="halfHalfCheckbox">
+                    <span class="halfhalf-switch">
+                        <span class="halfhalf-slider"></span>
+                    </span>
+                    <span class="halfhalf-text">Quero dividir em dois sabores!</span>
+                </label>
+                <div class="halfhalf-flavors" id="halfHalfFlavors" style="display: none;">
+                    <div class="halfhalf-select">
+                        <label>Primeiro sabor:</label>
+                        <select id="firstHalf">
+                            <option value="">Selecione...</option>
+                        </select>
+                    </div>
+                    <div class="halfhalf-select">
+                        <label>Segundo sabor:</label>
+                        <select id="secondHalf">
+                            <option value="">Selecione...</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Opção Borda Recheada (para Pizzas) -->
+            <div class="modal-options" id="borderOptions" style="display: none;">
+                <label class="modal-label">🧀 Borda Recheada (+R$ 2,00):</label>
+                <div class="border-options">
+                    <label class="border-option">
+                        <input type="radio" name="border" value="Sem borda" data-price="0" checked>
+                        <span class="border-box"><i class="fas fa-times-circle"></i> Sem borda</span>
                     </label>
-                    <label class="extra-option">
-                        <input type="checkbox" name="extra" value="Queijo Extra" data-price="3">
-                        <span class="extra-box">
-                            <i class="fas fa-plus-circle"></i>
-                            <span class="extra-name">Queijo Extra</span>
-                            <span class="extra-price">+ R$ 3</span>
-                        </span>
+                    <label class="border-option">
+                        <input type="radio" name="border" value="Catupiry" data-price="2">
+                        <span class="border-box">🧀 Catupiry</span>
                     </label>
-                    <label class="extra-option">
-                        <input type="checkbox" name="extra" value="Ovo" data-price="3">
-                        <span class="extra-box">
-                            <i class="fas fa-plus-circle"></i>
-                            <span class="extra-name">Ovo</span>
-                            <span class="extra-price">+ R$ 3</span>
-                        </span>
-                    </label>
-                    <label class="extra-option">
-                        <input type="checkbox" name="extra" value="Batinha Frita" data-price="7">
-                        <span class="extra-box">
-                            <i class="fas fa-plus-circle"></i>
-                            <span class="extra-name">Batinha Frita</span>
-                            <span class="extra-price">+ R$ 7</span>
-                        </span>
-                    </label>
-                    <label class="extra-option">
-                        <input type="checkbox" name="extra" value="Refrigerante" data-price="5">
-                        <span class="extra-box">
-                            <i class="fas fa-plus-circle"></i>
-                            <span class="extra-name">Refrigerante</span>
-                            <span class="extra-price">+ R$ 5</span>
-                        </span>
+                    <label class="border-option">
+                        <input type="radio" name="border" value="Cheddar" data-price="2">
+                        <span class="border-box">🧀 Cheddar</span>
                     </label>
                 </div>
             </div>
@@ -496,7 +652,7 @@
             <!-- Campo de Observação -->
             <div class="modal-observation">
                 <label class="modal-label">Observação (opcional):</label>
-                <textarea id="productObservation" placeholder="Ex: Sem cebola, pouco sal, etc..."></textarea>
+                <textarea id="productObservation" placeholder="Ex: Sem cebola, poco sal, etc..."></textarea>
             </div>
 
             <!-- Quantidade e Finalizar -->
@@ -511,6 +667,76 @@
                     Adicionar - <span id="modalTotalPrice">R$ 0,00</span>
                 </button>
             </div>
+        </div>
+    </div>
+
+    <!-- Modal de Finalização do Pedido -->
+    <div class="modal-overlay" id="checkoutModal">
+        <div class="modal-content checkout-modal">
+            <button class="modal-close" id="checkoutClose"><i class="fas fa-times"></i></button>
+            <h2 class="checkout-title"><i class="fas fa-clipboard-check"></i> Finalizar Pedido</h2>
+            
+            <div class="checkout-form">
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> Nome Completo</label>
+                    <input type="text" id="customerName" placeholder="Seu nome">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-map-marker-alt"></i> Endereço</label>
+                    <input type="text" id="customerAddress" placeholder="Rua, número, bairro">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-map-pin"></i> Referência</label>
+                    <input type="text" id="customerReference" placeholder="Próximo a...">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-motorcycle"></i> Local de Entrega</label>
+                    <select id="customerDelivery">
+                        <option value="São José">São José - Grátis</option>
+                        <option value="Cedro">Cedro - R$ 5,00</option>
+                        <option value="Risos da Noite">Risos da Noite - R$ 7,00</option>
+                        <option value="Feijão Bravo">Feijão Bravo - R$ 7,00</option>
+                        <option value="Medeiros">Medeiros - R$ 7,00</option>
+                        <option value="Enego">Enego - R$ 5,00</option>
+                        <option value="Macaco">Macaco - R$ 7,00</option>
+                        <option value="Nova Morada">Nova Morada - R$ 7,00</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-credit-card"></i> Pagamento</label>
+                    <select id="customerPayment">
+                        <option value="PIX">PIX</option>
+                        <option value="Dinheiro">Dinheiro</option>
+                    </select>
+                </div>
+                <div class="form-group" id="changeGroup" style="display: none;">
+                    <label><i class="fas fa-money-bill-wave"></i> Troco para</label>
+                    <input type="number" id="customerChange" placeholder="Valor do troco">
+                </div>
+            </div>
+
+            <div class="checkout-summary">
+                <h3>Resumo do Pedido</h3>
+                <div id="checkoutItems"></div>
+                <div class="checkout-totals">
+                    <div class="checkout-subtotal">
+                        <span>Subtotal</span>
+                        <span id="checkoutSubtotal">R$ 0,00</span>
+                    </div>
+                    <div class="checkout-delivery">
+                        <span>Entrega</span>
+                        <span id="checkoutDelivery">R$ 0,00</span>
+                    </div>
+                    <div class="checkout-total">
+                        <span>Total</span>
+                        <span id="checkoutTotal">R$ 0,00</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="checkout-confirm-btn" id="confirmCheckoutBtn">
+                <i class="fab fa-whatsapp"></i> Enviar Pedido
+            </button>
         </div>
     </div>
 
