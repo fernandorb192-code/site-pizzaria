@@ -102,12 +102,13 @@ const pizzaFlavors = [
 
 // Função para encontrar o preço de uma pizza pelo nome
 function getPizzaPrice(pizzaName) {
+    const normalizedName = pizzaName.toLowerCase().trim();
     for (var i = 0; i < pizzaFlavors.length; i++) {
-        if (pizzaFlavors[i].name === pizzaName) {
+        if (pizzaFlavors[i].name.toLowerCase().trim() === normalizedName) {
             return pizzaFlavors[i].price;
         }
     }
-    return 27.99; // Default price if not found
+    return 28.00; // Default price if not found
 }
 
 // ================================
@@ -394,9 +395,9 @@ function initModal() {
             kitHalfHalfFlavors.style.display = 'none';
             kitSecondHalf.value = '';
             
-            // Populate second flavor dropdown - ONLY R$ 27,99 and R$ 29,99 pizzas
+            // Populate second flavor dropdown - pizzas até R$ 30,00
             kitSecondHalf.innerHTML = '<option value="">Selecione...</option>';
-            const cheapPizzas = pizzaFlavors.filter(f => f.price === 28.00 || f.price === 30.00);
+            const cheapPizzas = pizzaFlavors.filter(f => f.price <= 30.00);
             cheapPizzas.forEach(function(flavor) {
                 kitSecondHalf.innerHTML += '<option value="' + flavor.baseName + '" data-price="' + flavor.price + '">' + flavor.baseName + ' - R$ ' + flavor.price.toFixed(2).replace('.', ',') + '</option>';
             });
@@ -605,9 +606,9 @@ function openProductModal(id, name, price, category, image) {
             // Populate kit half-half first flavor dropdown (will be filled when pizza is selected)
             kitFirstHalf.innerHTML = '<option value="">Selecione...</option>';
             
-            // Populate kit half-half second flavor dropdown - ONLY R$ 27,99 and R$ 29,99 pizzas
+            // Populate kit half-half second flavor dropdown - pizzas até R$ 30,00
             kitSecondHalf.innerHTML = '<option value="">Selecione...</option>';
-            const cheapPizzas = pizzaFlavors.filter(f => f.price === 28.00 || f.price === 30.00);
+            const cheapPizzas = pizzaFlavors.filter(f => f.price <= 30.00);
             cheapPizzas.forEach(function(flavor) {
                 kitSecondHalf.innerHTML += '<option value="' + flavor.baseName + '" data-price="' + flavor.price + '">' + flavor.baseName + ' - R$ ' + flavor.price.toFixed(2).replace('.', ',') + '</option>';
             });
@@ -629,8 +630,7 @@ function openProductModal(id, name, price, category, image) {
         kitSodaSection.style.display = 'none';
     }
 
-    updateModalTotal();
-    productModal.classList.add('active');
+    currentModalTotal = currentProduct.basePrice * currentProduct.quantity; updateModalTotal(); productModal.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
@@ -678,11 +678,11 @@ function updateModalTotal() {
     // Handle Kit Popular / Kit Show (single pizza)
     if (currentProduct.category === 'kits' && !currentProduct.name.toLowerCase().includes('família') && !currentProduct.name.toLowerCase().includes('familia') && !currentProduct.name.toLowerCase().includes('explosão') && !currentProduct.name.toLowerCase().includes('explosao')) {
         // Determine base price based on kit type
-        let kitBasePrice = 39.99; // Kit Popular
+        let kitBasePrice = 40.00; // Kit Popular
         let kitNamePrefix = 'KIT POPULAR';
         
         if (currentProduct.name.toLowerCase().includes('show')) {
-            kitBasePrice = 49.99; // Kit Show
+            kitBasePrice = 50.00; // Kit Show
             kitNamePrefix = 'KIT SHOW';
         }
         
@@ -750,7 +750,7 @@ function updateModalTotal() {
     }
     // Handle Kit Família - 2 pizzas
     else if (currentProduct.category === 'kits' && (currentProduct.name.toLowerCase().includes('família') || currentProduct.name.toLowerCase().includes('familia'))) {
-        const kitBasePrice = 79.99; // Kit Família base
+        const kitBasePrice = 80.00; // Kit Família base
         let kitTotalPrice = kitBasePrice;
         
         // Get Pizza 1
@@ -834,7 +834,7 @@ function updateModalTotal() {
     
     // Handle Kit Explosão - 2 pizzas (border already included in price)
     if (currentProduct.category === 'kits' && (currentProduct.name.toLowerCase().includes('explosão') || currentProduct.name.toLowerCase().includes('explosao'))) {
-        const kitBasePrice = 99.99; // Kit Explosão base
+        const kitBasePrice = 100.00; // Kit Explosão base
         let kitTotalPrice = kitBasePrice;
         
         // Get Pizza 1
@@ -944,7 +944,7 @@ function updateModalTotal() {
         if (currentProduct.name.toLowerCase().includes('família') || currentProduct.name.toLowerCase().includes('familia')) {
             modalProductPrice.textContent = 'Kit Família: R$ 79,99 (2 pizzas até R$ 30 cada, borda +R$ 2,00)';
         } else if (currentProduct.name.toLowerCase().includes('explosão') || currentProduct.name.toLowerCase().includes('explosao')) {
-            modalProductPrice.textContent = 'Kit Explosão: R$ 99,99 (2 pizzas até R$ 30 cada, borda já inclusa)';
+            modalProductPrice.textContent = 'Kit Explosão: R$ 100,00 (2 pizzas até R$ 30 cada, borda já inclusa)';
         } else {
             // Kit Popular or Kit Show
             const selectedPizza = kitPizzaSelect.options[kitPizzaSelect.selectedIndex];
@@ -1464,3 +1464,4 @@ function showToast(message) {
 // Make functions globally available
 window.updateItemQuantity = updateItemQuantity;
 window.removeFromCart = removeFromCart;
+
