@@ -2638,12 +2638,26 @@ img {
     to { opacity: 1; transform: translateY(0); }
 }
 
+.halfhalf-select select:disabled {
+    background: rgba(255, 107, 53, 0.1);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    font-weight: 600;
+    cursor: not-allowed;
+}
+
 .halfhalf-select label {
     display: block;
     font-size: 0.8rem;
     color: var(--text-secondary);
     margin-bottom: 6px;
     font-weight: 500;
+}
+
+.halfhalf-select select:disabled + label::after {
+    content: ' (sabor selecionado)';
+    font-size: 0.7rem;
+    color: var(--color-primary);
 }
 
 .halfhalf-select select {
@@ -2718,6 +2732,81 @@ img {
 .border-option:hover .border-box {
     border-color: var(--color-primary-light);
     transform: translateY(-2px);
+}
+
+/* ============================================
+   Opções de Refrigerante (Kits)
+   ============================================ */
+.soda-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.soda-option {
+    flex: 1;
+    cursor: pointer;
+}
+
+.soda-option input {
+    display: none;
+}
+
+.soda-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 14px;
+    background: var(--bg-input);
+    border: 2px solid transparent;
+    border-radius: var(--border-radius-md);
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+}
+
+.soda-option input:checked + .soda-box {
+    border-color: var(--color-primary);
+    background: rgba(255, 107, 53, 0.1);
+    color: var(--color-primary);
+}
+
+.soda-option:hover .soda-box {
+    border-color: var(--color-primary-light);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   Select para Kit Pizza
+   ============================================ */
+.kit-select {
+    width: 100%;
+    padding: 12px 16px;
+    margin-top: 8px;
+    background: var(--bg-input);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.kit-select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+/* ============================================
+   Estilo para item de refrigerante no carrinho
+   ============================================ */
+.cart-item-soda {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 4px 0;
+    font-weight: 500;
 }
 
 /* ============================================
