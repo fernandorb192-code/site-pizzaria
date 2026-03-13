@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eri Lanches - Pizzaria & Lanchonete</title>
+    <meta name="description" content="As melhores pizzas e lanches delivery. Peça agora pelo WhatsApp!">
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Fixo -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">🍕</span>
+                <span class="logo-text">Eri <span>Lanches</span></span>
+            </div>
+            <div class="header-actions">
+                <!-- Botão Light/Dark Mode -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="cart-btn" id="cartBtn" aria-label="Abrir carrinho">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section Premium -->
+    <section class="hero">
+        <div class="hero-bg-elements">
+            <div class="hero-circle hero-circle-1"></div>
+            <div class="hero-circle hero-circle-2"></div>
+            <div class="hero-circle hero-circle-3"></div>
+            <div class="hero-food hero-food-1">🍕</div>
+            <div class="hero-food hero-food-2">🍔</div>
+            <div class="hero-food hero-food-3">🍟</div>
+            <div class="hero-food hero-food-4">🥤</div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge-wrapper">
+                    <span class="hero-badge">
+                        <span class="hero-badge-icon">🔥</span>
+                        Mais pedido da região
+                    </span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="hero-title-line1">As Melhores</span>
+                    <span class="hero-title-line2">
+                        <span class="hero-title-accent">Pizzas</span> & <span class="hero-title-accent2">Lanches</span>
+                    </span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    <span class="hero-subtitle-icon">✨</span>
+                    Sabor caseiro, ingredientes frescos e entrega rápida прямо agora!
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="#menu" class="hero-btn-primary">
+                        <span>Ver Cardápio</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#menu" class="hero-btn-secondary">
+                        <i class="fas fa-play"></i>
+                        <span>Como pedir</span>
+                    </a>
+                </div>
+                
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon"><i class="fas fa-motorcycle"></i></div>
+                        <div class="hero-feature-text">
+                            <span class="hero-feature-title">Entrega</span>
+                            <span class="hero-feature-subtitle">30-45 min</span>
+                        </div>
+                    </div>
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon"><i class="fas fa-star"></i></div>
+                        <div class="hero-feature-text">
+                            <span class="hero-feature-title">Avaliação</span>
+                            <span class="hero-feature-subtitle">4.9/5</span>
+                        </div>
+                    </div>
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon"><i class="fas fa-heart"></i></div>
+                        <div class="hero-feature-text">
+                            <span class="hero-feature-title">Clientes</span>
+                            <span class="hero-feature-subtitle">5.000+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="hero-image-container">
+                    <div class="hero-main-image">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=600&fit=crop" alt="Pizza deliciosa">
+                        <div class="hero-image-glow"></div>
+                    </div>
+                    <div class="hero-floating-card hero-floating-card-1">
+                        <span class="hero-floating-icon">🍕</span>
+                        <div class="hero-floating-info">
+                            <span class="hero-floating-name">Pizza Frango</span>
+                            <span class="hero-floating-price">R$ 35</span>
+                        </div>
+                    </div>
+                    <div class="hero-floating-card hero-floating-card-2">
+                        <span class="hero-floating-icon">🍔</span>
+                        <div class="hero-floating-info">
+                            <span class="hero-floating-name">Hambúrguer</span>
+                            <span class="hero-floating-price">R$ 18</span>
+                        </div>
+                    </div>
+                    <div class="hero-decorative-ring"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="var(--bg-primary)"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Seção Cardápio -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <div class="menu-header">
+                <h2 class="section-title">Nosso Cardápio</h2>
+                <p class="section-subtitle">Escolha seus favoritos e peça agora mesmo!</p>
+            </div>
+
+            <!-- Abas de Categorias -->
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="all"><span>Cardápio</span></button>
+                <button class="tab-btn" data-category="pizzas"><span>Pizzas</span></button>
+                <button class="tab-btn" data-category="hamburgueres"><span>Hambúrgueres</span></button>
+            </div>
+
+            <!-- Grid de Produtos -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Pizzas -->
+                <div class="product-card" data-category="pizzas">
+                    <div class="product-image">
+                        <span class="product-badge">Mais Vendida</span>
+                        <button class="product-wishlist" title="Favoritar"><i class="fas fa-heart"></i></button>
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="Pizza Frango Bacon">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Pizza</span>
+                        <h3 class="product-name">Pizza Frango Bacon</h3>
+                        <p class="product-description">Frango desfiado, bacon crocante, mussarela e catupiry. Uma combinação irresistível!</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 35,00</span>
+                            <button class="add-cart-btn" data-id="1" data-name="Pizza Frango Bacon" data-price="35.00" data-category="pizzas">
+                                <i class="fas fa-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="pizzas">
+                    <div class="product-image">
+                        <button class="product-wishlist" title="Favoritar"><i class="fas fa-heart"></i></button>
+                        <img src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?w=400&h=300&fit=crop" alt="Pizza Calabresa">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Pizza</span>
+                        <h3 class="product-name">Pizza Calabresa</h3>
+                        <p class="product-description">Calabresa fatiada, cebola roxa, mussarela eazeite de oliva. Clássica e deliciosa!</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 32,00</span>
+                            <button class="add-cart-btn" data-id="2" data-name="Pizza Calabresa" data-price="32.00" data-category="pizzas">
+                                <i class="fas fa-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="pizzas">
+                    <div class="product-image">
+                        <button class="product-wishlist" title="Favoritar"><i class="fas fa-heart"></i></button>
+                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop" alt="Pizza Portuguesa">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Pizza</span>
+                        <h3 class="product-name">Pizza Portuguesa</h3>
+                        <p class="product-description">Presunto, mussarela, ovo, cebola roxa e azeitonas. Todo mundo ama!</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 34,00</span>
+                            <button class="add-cart-btn" data-id="3" data-name="Pizza Portuguesa" data-price="34.00" data-category="pizzas">
+                                <i class="fas fa-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="pizzas">
+                    <div class="product-image">
+                        <button class="product-wishlist" title="Favoritar"><i class="fas fa-heart"></i></button>
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop" alt="Pizza Marguerita">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Pizza</span>
+                        <h3 class="product-name">Pizza Marguerita</h3>
+                        <p class="product-description">Mussarela, tomate fresco e manjericão. Sabor italiano autêntico!</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 30,00</span>
+                            <button class="add-cart-btn" data-id="4" data-name="Pizza Marguerita" data-price="30.00" data-category="pizzas">
+                                <i class="fas fa-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="pizzas">
+                    <div class="product-image">
+                        <button class="product-wishlist" title="Favoritar"><i class="fas fa-heart"></i></button>
+                        <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop" alt="Pizza Quatro Queijos">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Pizza</span>
+                        <h3 class="product-name">Pizza Quatro Queijos</h3>
+                        <p class="product-description">Mussarela, gorgonzola, parmesan e catupiry. Para os lovers de queijo!</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 36,00</span>
+                            <button class="add-cart-btn" data-id="5" data-name="Pizza Quatro Queijos" data-price="36.00" data-category="pizzas">
+                                <i class="fas fa-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="pizzas">
+                    <div class="product-image">
+                        <span class="product-badge">Picante</span>
+                        <button class="product-wishlist" title="Favoritar"><i class="fas fa-heart"></i></button>
+                        <img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=400&h=300&fit=crop" alt="Pizza Pepperoni">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Pizza</span>
+                        <h3 class="product-name">Pizza Pepperoni</h3>
+                        <p class="product-description">Pepperoni americano e mussarela especial. Para quem curte!</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 38,00</span>
+                            <button class="add-cart-btn" data-id="6" data-name="Pizza Pepperoni" data-price="38.00" data-category="pizzas">
+                                <i class="fas fa-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hambúrgueres -->
+                <div class="product-card" data-category="hamburgueres">
+                    <div class="product-image">
+                        <span class="product-badge">Tradicional</span>
+                        <button class="product-wishlist" title="Favoritar"><i class="fas fa-heart"></i></button>
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop" alt="Hambúrguer Clássico">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Hambúrguer</span>
+                        <h3 class="product-name">Hambúrguer Clássico</h3>
+                        <p class="product-description">Pão, carne 180g, queijo, alface, tomate e maionese. O de sempre!</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 18,00</span>
+                            <button class="add-cart-btn" data-id="7" data-name="Hambúrguer Clássico" data-price="18.00" data-category="hamburgueres">
+                                <i class="fas fa-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="hamburgueres">
+                    <div class="product-image">
+                        <button class="product-wishlist" title="Favoritar"><i class="fas fa-heart"></i></button>
+                        <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&h=300&fit=crop" alt="Hambúrguer Bacon">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Hambúrguer</span>
+                        <h3 class="product-name">Hambúrguer Bacon</h3>
+                        <p class="product-description">Pão, carne 180g, bacon crocante, cheddar e maionese. Ням!</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 22,00</span>
+                            <button class="add-cart-btn" data-id="8" data-name="Hambúrguer Bacon" data-price="22.00" data-category="hamburgueres">
+                                <i class="fas fa-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="hamburgueres">
+                    <div class="product-image">
+                        <span class="product-badge">Premium</span>
+                        <button class="product-wishlist" title="Favoritar"><i class="fas fa-heart"></i></button>
+                        <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&h=300&fit=crop" alt="Hambúrguer Duplo">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Hambúrguer</span>
+                        <h3 class="product-name">Hambúrguer Duplo</h3>
+                        <p class="product-description">Pão, 2 carnes 180g, 2 queijos, bacon e maionese especial. Para fome dupla!</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 28,00</span>
+                            <button class="add-cart-btn" data-id="9" data-name="Hambúrguer Duplo" data-price="28.00" data-category="hamburgueres">
+                                <i class="fas fa-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="hamburgueres">
+                    <div class="product-image">
+                        <span class="product-badge">Vegano</span>
+                        <button class="product-wishlist" title="Favoritar"><i class="fas fa-heart"></i></button>
+                        <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=400&h=300&fit=crop" alt="Hambúrguer Veggie">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Hambúrguer</span>
+                        <h3 class="product-name">Hambúrguer Veggie</h3>
+                        <p class="product-description">Pão integral, hambúrguer de grão-de-bico, legumes e maionese verde.</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 20,00</span>
+                            <button class="add-cart-btn" data-id="10" data-name="Hambúrguer Veggie" data-price="20.00" data-category="hamburgueres">
+                                <i class="fas fa-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-icon">🍕</span>
+                <span class="logo-text">Eri <span>Lanches</span></span>
+            </div>
+            <p class="footer-text">Entregamos em São José e região!</p>
+            <div class="footer-contact">
+                <p><i class="fas fa-phone-alt"></i> (85) 99999-9999</p>
+                <p><i class="fab fa-whatsapp"></i> WhatsApp: (85) 99999-9999</p>
+                <p><i class="fas fa-map-marker-alt"></i> São José - Fortaleza, CE</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p class="footer-copyright">© 2024 Eri Lanches. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Carrinho Lateral (Slide-in) -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2><i class="fas fa-shopping-cart"></i> Seu Pedido</h2>
+            <button class="close-cart-btn" id="closeCartBtn" aria-label="Fechar carrinho">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="cart-items" id="cartItems">
+            <!-- Itens do carrinho serão inseridos via JavaScript -->
+            <div class="cart-empty" id="cartEmpty">
+                <i class="fas fa-shopping-basket"></i>
+                <p>Seu carrinho está vazio</p>
+                <span>Adicione itens do cardápio!</span>
+            </div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-summary">
+                <div class="cart-subtotal">
+                    <span>Subtotal:</span>
+                    <span id="cartSubtotal">R$ 0,00</span>
+                </div>
+                <div class="cart-delivery">
+                    <span><i class="fas fa-motorcycle"></i> Taxa de Entrega:</span>
+                    <span id="deliveryFee">A calcular</span>
+                </div>
+            </div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">R$ 0,00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn" disabled>
+                <i class="fab fa-whatsapp"></i> Finalizar Pedido
+            </button>
+            <p class="delivery-info"><i class="fas fa-info-circle"></i> Entrega em São José e região</p>
+        </div>
+    </aside>
+
+    <!-- Modal de Adicionar Produto -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-product-info">
+                <img src="" alt="" id="modalProductImage">
+                <div class="modal-product-details">
+                    <h3 id="modalProductName">Produto</h3>
+                    <p id="modalProductDescription">Descrição</p>
+                    <span class="modal-product-price" id="modalProductPrice">R$ 0,00</span>
+                </div>
+            </div>
+            
+            <!-- Opções de Tamanho (para Pizzas) -->
+            <div class="modal-options" id="sizeOptions" style="display: none;">
+                <label class="modal-label">Escolha o tamanho:</label>
+                <div class="size-options">
+                    <label class="size-option">
+                        <input type="radio" name="size" value="small" data-price="0">
+                        <span class="size-box">
+                            <span class="size-name">Pequena</span>
+                            <span class="size-price">+ R$ 0</span>
+                        </span>
+                    </label>
+                    <label class="size-option">
+                        <input type="radio" name="size" value="medium" data-price="8" checked>
+                        <span class="size-box">
+                            <span class="size-name">Média</span>
+                            <span class="size-price">+ R$ 8</span>
+                        </span>
+                    </label>
+                    <label class="size-option">
+                        <input type="radio" name="size" value="large" data-price="15">
+                        <span class="size-box">
+                            <span class="size-name">Grande</span>
+                            <span class="size-price">+ R$ 15</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Opções de Adicionais (para Hambúrgueres) -->
+            <div class="modal-options" id="extrasOptions" style="display: none;">
+                <label class="modal-label">Adicionais:</label>
+                <div class="extras-options">
+                    <label class="extra-option">
+                        <input type="checkbox" name="extra" value="Bacon Extra" data-price="5">
+                        <span class="extra-box">
+                            <i class="fas fa-plus-circle"></i>
+                            <span class="extra-name">Bacon Extra</span>
+                            <span class="extra-price">+ R$ 5</span>
+                        </span>
+                    </label>
+                    <label class="extra-option">
+                        <input type="checkbox" name="extra" value="Queijo Extra" data-price="3">
+                        <span class="extra-box">
+                            <i class="fas fa-plus-circle"></i>
+                            <span class="extra-name">Queijo Extra</span>
+                            <span class="extra-price">+ R$ 3</span>
+                        </span>
+                    </label>
+                    <label class="extra-option">
+                        <input type="checkbox" name="extra" value="Ovo" data-price="3">
+                        <span class="extra-box">
+                            <i class="fas fa-plus-circle"></i>
+                            <span class="extra-name">Ovo</span>
+                            <span class="extra-price">+ R$ 3</span>
+                        </span>
+                    </label>
+                    <label class="extra-option">
+                        <input type="checkbox" name="extra" value="Batinha Frita" data-price="7">
+                        <span class="extra-box">
+                            <i class="fas fa-plus-circle"></i>
+                            <span class="extra-name">Batinha Frita</span>
+                            <span class="extra-price">+ R$ 7</span>
+                        </span>
+                    </label>
+                    <label class="extra-option">
+                        <input type="checkbox" name="extra" value="Refrigerante" data-price="5">
+                        <span class="extra-box">
+                            <i class="fas fa-plus-circle"></i>
+                            <span class="extra-name">Refrigerante</span>
+                            <span class="extra-price">+ R$ 5</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Campo de Observação -->
+            <div class="modal-observation">
+                <label class="modal-label">Observação (opcional):</label>
+                <textarea id="productObservation" placeholder="Ex: Sem cebola, pouco sal, etc..."></textarea>
+            </div>
+
+            <!-- Quantidade e Finalizar -->
+            <div class="modal-actions">
+                <div class="quantity-selector">
+                    <button class="qty-btn" id="qtyMinus"><i class="fas fa-minus"></i></button>
+                    <span id="qtyValue">1</span>
+                    <button class="qty-btn" id="qtyPlus"><i class="fas fa-plus"></i></button>
+                </div>
+                <button class="modal-add-btn" id="confirmAddBtn">
+                    <i class="fas fa-cart-plus"></i>
+                    Adicionar - <span id="modalTotalPrice">R$ 0,00</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast de Notificação -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Item adicionado ao carrinho!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
