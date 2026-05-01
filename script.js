@@ -1475,4 +1475,3 @@ function showToast(message) {
 // Make functions globally available
 window.updateItemQuantity = updateItemQuantity;
 window.removeFromCart = removeFromCart;
-
